@@ -10,24 +10,24 @@ export class HomeComponent /*implements OnInit - Eyad question: what is for?*/ {
     data = [
         { name: 'Udemy', password: 'Udemy123', url: 'www.udemy.com' },
         { name: 'GitHub', password: 'Git123', url: 'www.github.com' }
-    ]
+    ];
 
     add(webN: string, webP: string, webL: string) {
         if (webN === '' || webP === '' || webL === '') {
-            alert('All fields must be completed')
+            alert('All fields must be completed');
         } else {
-            let newUser = { name: webN, password: webP, url: webL }
+            let newUser = { name: webN, password: webP, url: webL };
             if (webN && webP) {
-                this.data.push(newUser)
+                this.data.push(newUser);
             };
-            console.log(newUser)
-            alert(newUser.name + ' was successfully added')
+            console.log(newUser);
+            alert(newUser.name + ' was successfully added');
         }
     }
 
     edit(Ename: string, Epass: string, Eurl: string) {
         if (Ename === '' || Eurl === '') {
-            alert('All fields must be completed')
+            alert('All fields must be completed');
         }
         for (let x of this.data) {
             if (Ename === x.name && Eurl === x.url) {
@@ -35,10 +35,9 @@ export class HomeComponent /*implements OnInit - Eyad question: what is for?*/ {
                     alert('Enter the new password');
                 } else {
                     x.password = Epass;
-                    alert('Password Changed')
+                    alert('Password Changed');
                     console.log('The new password is: ' + x.password);
                     console.log(JSON.stringify(this.data, null, `  `));
-                    // }
                 }
             }
         }
@@ -47,7 +46,7 @@ export class HomeComponent /*implements OnInit - Eyad question: what is for?*/ {
 
     remove(deleteE: string) {
         if (deleteE === '') {
-            alert('Which URl shall be removed?')
+            alert('Which URl shall be removed?');
         }
         for (let i of this.data) {
             if (deleteE === i.url) {
