@@ -1,0 +1,18 @@
+header {
+  background: #2ecc71;
+  color: #FFF;
+  text-align: center;
+  padding: 15px;
+  height: 100px;
+}
+
+h1, p {
+  padding: 10px 0px 15px 0px;
+}
+
+main {
+  min-height: 400px;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}

@@ -1,0 +1,55 @@
+<div id="container">
+    <section>
+        <div id="data-view" style="display: none">
+            <ul>
+                <li *ngFor="let info of data">
+                    <p class="data">{{info.url}}</p>
+                    <p class="data">Username: {{info.name}}</p>
+                    <p class="data">Password: {{info.password}}</p>
+                    <p><a href="http://{{info.url}}" target="_blank">Go to Website =></a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Reveal Passwords -->
+    <div id="reveal">
+        <button (click)="tooglePasswords()">Reveal Passwords</button>
+    </div>
+
+    <!-- Add New Entry -->
+    <div id="form-add-delete">
+        <section>
+            <form id="add">
+                <input #webL type="text" placeholder="Enter URL">
+                <input #webN type="text" placeholder="Enter Username">
+                <input #webP type="password" placeholder="Enter Password">
+                <button (click)='add(webN.value,webP.value,webL.value);
+			webN.value = "";
+			webP.value = "";
+			webL.value = "";
+			'>Add</button>
+            </form>
+
+            <!-- Edit existing Entry -->
+            <section id="edit">
+                <form>
+                    <input #Eurl type="text" placeholder="Enter URL">
+                    <input #Ename type="text" placeholder="Enter Current username">
+                    <input #Epass type="password" placeholder="Enter new Password">
+                    <button (click)='edit(Ename.value,Epass.value,Eurl.value);
+		Ename.value = "";
+		Epass.value = "";
+		Eurl.value = "";
+		'>Update</button>
+                </form>
+            </section>
+
+            <!-- remove Exisitng Entry -->
+            <div id="remove">
+                <input #deleteE type="text" placeholder="Enter URL to be deleted">
+                <button (click)='remove(deleteE.value); deleteE.value =""'>Delete</button>
+            </div>
+        </section>
+    </div>
+</div>

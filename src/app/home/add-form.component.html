@@ -1,0 +1,10 @@
+<form id="add">
+    <input #url type="text" placeholder="Enter URL">
+    <input #name type="text" placeholder="Enter Username">
+    <input #password type="password" placeholder="Enter Password">
+    <button (click)='add(name.value, password.value, url.value);
+			name.value = "";
+			password.value = "";
+			url.value = "";
+			'>Add</button>
+</form>

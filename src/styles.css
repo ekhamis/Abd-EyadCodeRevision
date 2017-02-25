@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+*{
+	padding:0px;
+	margin:0px;
+	font-family: 'Ubuntu', sans-serif;
+	
+}
+#wrapper {
+	margin: 5px;
+    background: #e67e22;
+}
+
+
+/* Smaller than laptops ----------- */
+@media screen and (min-width: 340px) and (max-width: 768px) {
+    body {
+    width: auto;
+	margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+/* Laptops and Disktops ----------- */
+@media screen and (min-width: 1024px) {
+body {
+    margin-left: auto;
+    margin-right: auto;
+	width: 1024px;
+    }
+}
